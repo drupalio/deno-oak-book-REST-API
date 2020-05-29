@@ -44,9 +44,9 @@ jobs:
       uses: anthonychu/azure-webapps-deno-deploy@v0.1.0
       with:
         # Name of the Azure Web App
-        app-name: deno-rest-book-api
+        app-name: deno-book-api
           # Name of the resource group
-        resource-group: amgsystem-test-res-grp-123
+        resource-group: deno-test-api-rg
          # Path to zip package to deploy
         package: app.zip
         script-file: server.bundle.js
