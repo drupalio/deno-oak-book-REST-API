@@ -25,9 +25,7 @@ jobs:
     # Runs a single command using the runners shell
     - name: Run a one-line script
       run: echo Hello, world!
-    - uses: azure/login@v1.1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}  
+      
     - name: Set up Deno
       uses: denolib/setup-deno@master
       with:
@@ -37,6 +35,10 @@ jobs:
       run: |
         deno bundle server.ts server.bundle.js
         zip app.zip server.bundle.js
+        
+    - uses: azure/login@v1.1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}    
 
     - name: Deploy Deno to Azure App Service
       uses: anthonychu/azure-webapps-deno-deploy@v0.1.0
