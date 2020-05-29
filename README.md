@@ -1,4 +1,4 @@
-## REST API using Deno - BOOKS - (CRUD)
+## REST API using Deno - BOOKS API - (CRUD)
 
 - Install denon
   `deno install --allow-read --allow-run --allow-write -f --unstable https://deno.land/x/denon/denon.ts`
